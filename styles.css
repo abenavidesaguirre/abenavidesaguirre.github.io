@@ -17,7 +17,8 @@ background-image: url('img/joel-filipe-Wc8k-KryEPM-unsplash.jpg');
 .hithere h1{
  position: absolute;
  width: 90%;
- height: 50px;
+ top: 50px;
+ height: 100%;
  margin: 0;
  font-size: 90px;
  color: white;
