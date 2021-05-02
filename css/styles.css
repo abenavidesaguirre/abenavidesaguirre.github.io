@@ -1,6 +1,4 @@
 .intro{
-  background-image: linear-gradient(to bottom, #5200A3, #5200A5, #5200A8);
-  height: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  background-color: linear-gradient(to bottom, #5200A3, #5200A5, #5200A8);
+ 
 }
