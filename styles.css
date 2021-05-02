@@ -13,8 +13,8 @@
 .about{
   margin: -8px -8px 8px;
   height: 100vh;
-  background: rgb(195,128,34);
-background: linear-gradient(180deg, rgba(195,128,34,1) 0%, rgba(202,172,36,1) 61%, rgba(219,208,39,1) 84%, rgba(253,233,45,1) 100%);
+  background: rgb(247,186,59);
+background: linear-gradient(180deg, rgba(247,186,59) 0%, rgba(202,172,36,1) 61%, rgba(219,208,39,1) 84%, rgba(253,233,45,1) 100%);
 
 
 }
