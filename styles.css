@@ -19,7 +19,6 @@ background-image: url('img/joel-filipe-Wc8k-KryEPM-unsplash.jpg');
  width: 90%;
  height: 100%;
  margin: 0;
- line-height: 50px;
  font-size: 90px;
  color: white;
   text-align: right;
@@ -30,12 +29,13 @@ background-image: url('img/joel-filipe-Wc8k-KryEPM-unsplash.jpg');
 }
 
 .hithere h2{
-  padding-top: 32%;
+ 
+  top: 275px;
+ margin-bottom:20000px;
  position: absolute;
  width: 90%;
  height: 100%;
- margin: 0;
- line-height: 50px;
+
  font-size: 40px;
  color: white;
   text-align: right;
