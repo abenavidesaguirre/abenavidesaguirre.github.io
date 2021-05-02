@@ -18,3 +18,26 @@ background: linear-gradient(180deg, rgba(247,186,59) 0%, rgba(202,172,36,1) 61%,
 
 
 }
+
+.skills{
+  margin: -8px -8px 8px;
+  height: 100vh;
+  background: rgb(37,221,231);
+background: linear-gradient(180deg, rgba(37,221,231,1) 0%, rgba(45,236,237,1) 55%, rgba(40,255,253,1) 84%, rgba(130,255,247,1) 100%);
+  
+}
+
+.projects{
+  margin: -8px -8px 8px;
+  height: 100vh;
+  background: rgb(0,115,26);
+background: linear-gradient(180deg, rgba(0,115,26,1) 0%, rgba(0,186,52,1) 48%, rgba(8,230,19,1) 78%, rgba(75,255,83,1) 100%);
+}
+
+.contact{
+  margin: -8px -8px 8px;
+  height: 100vh;
+  background: rgb(37,221,231);
+background: linear-gradient(180deg, rgba(37,221,231,1) 0%, rgba(45,236,237,1) 55%, rgba(40,255,253,1) 84%, rgba(130,255,247,1) 100%);
+  
+}
