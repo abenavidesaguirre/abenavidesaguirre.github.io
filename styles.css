@@ -1,6 +1,7 @@
 h1{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: rgb(123,34,195);
+  background: linear-gradient(180deg, rgba(123,34,195,1) 0%, rgba(156,36,202,1) 61%, rgba(175,39,219,1) 84%, rgba(226,45,253,1) 100%);
+  padding: 500px;
 
 
   text-transform: uppercase;
