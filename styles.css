@@ -1,5 +1,6 @@
 h1{
+  height: 100%;
   background-color: #5200A4;
-  background-image: linear-gradient(to bottom, #5200A4, #40F28A); 
+  background-image: linear-gradient(bottom, #5200A4, #40F28A); 
   text-transform: uppercase;
 }
