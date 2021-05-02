@@ -2,8 +2,9 @@
 .intro{
   margin: -8px -8px 8px;
   height: 100vh;
-  background: rgb(123,34,195);
-  background: linear-gradient(180deg, rgba(123,34,195,1) 0%, rgba(156,36,202,1) 61%, rgba(175,39,219,1) 84%, rgba(226,45,253,1) 100%);
+background: rgb(102,0,142);
+background: linear-gradient(180deg, rgba(102,0,142,1) 25%, rgba(156,17,210,1) 73%, rgba(178,30,237,1) 90%, rgba(203,83,251,1) 100%);
+background-image:
 }
 
 .hithere{
@@ -13,7 +14,23 @@
 }
 
 
-.hithere h3{
+.hithere h1{
+ position: absolute;
+ width: 90%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ font-size: 90px;
+ color: white;
+  text-align: right;
+ font-family:  Roboto, sans-serif;
+ 
+  
+  animation: hithere 1s linear;
+}
+
+.hithere h2{
+  padding-top: 32%;
  position: absolute;
  width: 90%;
  height: 100%;
@@ -22,10 +39,11 @@
  font-size: 40px;
  color: white;
   text-align: right;
- font-family:  Helvitica, sans-serif;
+ font-family:  Roboto, sans-serif;
  
-  
-  animation: hithere 1s linear;
+ 
+  animation: hithere 2s linear;
+
 }
 
 @keyframes hithere {
@@ -40,8 +58,8 @@
 .about{
   margin: -8px -8px 8px;
   height: 100vh;
-  background: rgb(247,186,59);
-background: linear-gradient(180deg, rgba(247,186,59) 0%, rgba(202,172,36,1) 61%, rgba(219,208,39,1) 84%, rgba(253,233,45,1) 100%);
+background: rgb(246,173,0);
+background: linear-gradient(180deg, rgba(246,173,0,1) 0%, rgba(250,184,0,1) 41%, rgba(252,201,47,1) 72%, rgba(254,238,49,1) 92%, rgba(255,254,155,1) 100%);
 
 
 }
