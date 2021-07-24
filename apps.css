@@ -44,6 +44,120 @@ table {
 
 /* ----------------------------------------------------------- */
 
-h1{
-    color: green;
+html {
+    animation: lock 3s;
 }
+
+body{
+    height: 100%;
+    background-color: #282829;
+}
+
+h1{
+    color: #FF634F;
+}
+
+h2{
+    color: #ffa599; 
+}
+
+p{
+    color: #acacb1;
+}
+
+
+
+
+
+.loader-wrapper{
+    background-color: #282829;
+    background-attachment: local;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    animation: loader-wrapper 3s ease forwards;
+}
+
+.loader {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    top:30%;
+    position: relative;
+    animation: loader 1.5s ease forwards;
+    animation-duration: 3s;
+    background-image: url("images/diamondLogo.png");
+    background-size: cover;
+  }
+
+
+
+  
+ 
+  
+  @keyframes loader {
+    0% {
+        transform: rotateY(0deg);   
+        opacity: 1;
+    }
+    
+    25% {
+        transform: rotateY(180deg);
+        opacity: 1;   
+
+    }
+    
+    50% {
+        transform: rotateY(360deg);
+        opacity: 1;   
+
+    }
+    
+    75% {
+        transform: rotateY(540deg);   
+
+    }
+    
+    100% {
+        transform: rotateY(720deg);
+        opacity: 0;
+        display: none;      
+    }
+  }
+
+  @keyframes loader-wrapper {
+      0% {
+            opacity: 1;
+      }
+      90% {
+          opacity: 1;
+      }
+      100% {
+          opacity: 0;
+       
+      }
+  }
+
+
+
+  @keyframes lock{
+      0% {
+          overflow: hidden;
+      }
+
+      98%{
+          overflow: hidden;
+      }
+
+    100% {
+        overflow: auto;
+    }
+  }
+ 
+
+  
+  
