@@ -88,9 +88,10 @@ p{
     height: 250px;
     top:30%;
     position: relative;
-    animation: loader 1.5s ease forwards;
     animation-duration: 3s;
-    background-image: url("images/diamondLogo.png");
+    animation: loader 6s ease forwards;
+
+    background-image: url("images/circleLogo.png");
     background-size: cover;
   }
 
