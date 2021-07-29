@@ -44,14 +44,14 @@ table {
 
 /* ----------------------------------------------------------- */
 
-html::-webkit-scrollbar-thumb {
-    background: red;
-}
+
+
 
 html {
     animation: lock 2.5s ease;
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
+
   
 }
 
@@ -166,6 +166,7 @@ a {
     left:50%;
     justify-content: center;
     position:absolute;
+    z-index: 5;
 
 }
 
@@ -173,6 +174,7 @@ a {
     height: 100px;
     width: 100px;
     animation: scroller 2s infinite ease;
+    -webkit-animation: scroller 2s infinite ease;
     opacity: 0;
     animation-delay: 6.8s;
 }
@@ -257,6 +259,9 @@ a {
     text-align: center;
     justify-content: center;
     animation: loader-wrapper 2.5s ease forwards;
+    -webkit-perspective: 90000px;
+    perspective: 90000px;
+  
 }
 
 .loader {
@@ -267,9 +272,9 @@ a {
     position: relative;
     animation-duration: 2.5s;
     animation: loader 4s ease forwards;
-
     background-image: url("images/circleLogo.png");
     background-size: cover;
+    
   }
 
 
@@ -287,6 +292,10 @@ a {
           transform: translateX(0%);
       }
   }
+
+ 
+
+
 
   @keyframes intro2{
     0% {
@@ -329,8 +338,9 @@ a {
         transform: translateY(25%) rotateY(360deg);
         opacity: 1;
     }
-
 }
+
+
  
   
   @keyframes loader {
@@ -356,7 +366,7 @@ a {
 
     }
     99%{
-        z-index: 50;
+        z-index: 6;
     }
     100% {
         transform: rotateY(720deg);
@@ -374,7 +384,7 @@ a {
           opacity: 1;
       }
       99% {
-          z-index: 50;
+          z-index: 5;
       }
 
       100% {
@@ -432,6 +442,8 @@ a {
 
       }
   }
+
+ 
 
   
   
