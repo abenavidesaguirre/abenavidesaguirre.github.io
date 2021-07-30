@@ -56,7 +56,7 @@ html {
 }
 
 body{
-    height: 100%;
+   
     background-color: #282829;
 }
 
@@ -84,7 +84,7 @@ p{
 a img {
     height: 5em;
     width: 5em;
-    z-index: 9999;
+    z-index: 10;
 
 }
 
@@ -102,8 +102,8 @@ a img {
 .intro{
     height: 100vh;
     width: 100vw;
-    padding-right: 100px;
-    padding-left: 135px;
+    padding-right: 90px;
+    padding-left: 121px;
 }
 
 a {
@@ -160,60 +160,48 @@ a {
 
 #scroller {
     display: block;
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
     text-align: center;
     bottom:0;
     left:50%;
     justify-content: center;
     position:absolute;
     z-index: 5;
+    padding-left: 17px;
 
 }
 
 #scroller img{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     animation: scroller 2s infinite ease;
     -webkit-animation: scroller 2s infinite ease;
     opacity: 0;
     animation-delay: 6.8s;
+    transform-origin: center;
 }
 
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 121px;
+    padding-right: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
 
 .about {
-    background-color: #202021;
-    height: 100vh;
-    width: 100vw;
-    padding-left: 135px;
-    padding-right: 10px; 
-}
+    display: inline-block;
+    height: 95%;
+    width: 97%;
+    background-color: #2f2f30;
+    border-radius: 25px;
 
-.skills{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 135px;
-    padding-right: 10px; 
-}
-
-.experience{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 135px;
-    padding-right: 10px; 
-}
-
-.portfolio{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 135px;
-    padding-right: 10px; 
-}
-
-.contact{
-    height: 100vh;
-    width: 100vw;
-    padding-left: 135px;
-    padding-right: 10px; 
+    
 }
 
 
@@ -252,8 +240,8 @@ a {
     background-color: #282829;
     background-attachment: local;
 
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     text-align: center;
