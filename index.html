@@ -16,8 +16,8 @@
 <body>
     
     <nav class="mainNav navbar-expand-md navbar-dark">
-    <a class="logo" href="">
-        <img src="images/circleLogo.png">
+    <a class="logo.png" href="">
+        <img src="images/logo.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuTarget">
         <span class="navbar-toggler-icon"></span>
@@ -31,13 +31,22 @@
                 <a id="skillsLink" href="#skillsPage">Skills</a>
             </li>
             <li class="nav-item">
-                 <a id="experienceLink" href="#experiencePage">Experience</a>
+                 <a id="involvementLink" href="#involvementPage">Involvement</a>
             </li>
             <li class="nav-item">
-                <a id="portfolioLink" href="#portfolioPage">Portfolio</a>
+                <a id="projectsLink" href="#projectsPage">Projects</a>
             </li>
             <li class="nav-item">
                  <a id="contactLink" href="#contactPage">Get In Touch</a>
+            </li>
+            <li class="nav-item">
+                <a id="resume" target="_blank" href="documents/AndreaBenavidesAguirre__Resume.pdf?#zoom=80&scrollbar=0&navpanes=0&toolbar=0&view=Fit">Resume</a>
+            </li>
+            <li class="nav-item">
+                <a id="linkedIn" target="_blank" href="https://www.linkedin.com/in/andreabenavidesaguirre"><img src="images/linkedIn.png"></a>
+            </li>
+            <li class="nav-item">
+                <a id="github" target="_blank" href="https://github.com/abenavidesaguirre"><img src="images/github.png"></a>
             </li>
         </ul>
    
@@ -66,6 +75,7 @@
 
             <div id="map" class="map">
                 <div class="travelMap">
+           
                     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1gBkvGC5EpwRbzyDAei-8UvCZlQLM5Nii&z=2" width="640" height="480"></iframe>
                 </div>
             </div>
@@ -86,7 +96,7 @@
                     Quisquam enim consectetur sunt repellendus, velit molestiae dicta neque et nisi porro delectus culpa saepe, libero nemo eos voluptatibus est animi facilis at voluptates? Minima laboriosam provident aliquid recusandae ex!
                     Saepe unde, dolorem veritatis quisquam nihil cumque atque consectetur officia amet. Deserunt molestiae magnam aut aspernatur consequuntur? Nobis ratione deleniti, eos, blanditiis libero ab cupiditate, laboriosam iusto repellendus dolorem tempore?</p>
 
-                    <button type="button" id="travelButton"><img src="images/output-onlinepngtools.png" width="150" height="55"></button>
+                    <button type="button" id="travelButton"><img src="images/plane.png" width="150" height="55"></button>
               
                 </div>
                 <div class="col">
@@ -122,7 +132,7 @@
         </section>
        
    
-    <section id="experiencePage" class="page">
+    <section id="involvementPage" class="page">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde fugit quis quod voluptas deleniti quae quidem commodi nostrum eligendi repudiandae labore et odit, natus fugiat iste quisquam voluptatum. Accusamus, consectetur.
         Ea deleniti, numquam fugit voluptate molestiae, dolore nesciunt eligendi modi itaque quos quisquam aspernatur repudiandae illum minus, officiis sit dolores possimus temporibus. Quisquam tempora unde fugiat recusandae cum odio? Incidunt.
         Illum quam dolorum reprehenderit molestiae aliquid, dignissimos obcaecati error voluptatem. Id atque aut suscipit ab aliquam quod, iure quae sed consequatur laboriosam expedita nostrum consectetur reprehenderit facilis illum ad provident!
@@ -151,7 +161,7 @@
         Aliquid eius quae iure mollitia, repellat at distinctio perferendis, quod deserunt odit totam error facilis, numquam reprehenderit sequi accusamus iste veniam nemo dolore sint voluptate itaque! Possimus atque ducimus at?
         </section>
 
-    <section id="portfolioPage" class="page">
+    <section id="projectsPage" class="page">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde fugit quis quod voluptas deleniti quae quidem commodi nostrum eligendi repudiandae labore et odit, natus fugiat iste quisquam voluptatum. Accusamus, consectetur.
         Ea deleniti, numquam fugit voluptate molestiae, dolore nesciunt eligendi modi itaque quos quisquam aspernatur repudiandae illum minus, officiis sit dolores possimus temporibus. Quisquam tempora unde fugiat recusandae cum odio? Incidunt.
         Illum quam dolorum reprehenderit molestiae aliquid, dignissimos obcaecati error voluptatem. Id atque aut suscipit ab aliquam quod, iure quae sed consequatur laboriosam expedita nostrum consectetur reprehenderit facilis illum ad provident!
@@ -236,55 +246,55 @@
 
             var pageAbout = $("#aboutPage").offset().top;
             var pageSkills = $("#skillsPage").offset().top;
-            var pageExperience = $("#experiencePage").offset().top;
-            var pagePortfolio = $("#portfolioPage").offset().top;
+            var pageInvolvement = $("#involvementPage").offset().top;
+            var pageProjects = $("#projectsPage").offset().top;
             var pageContact = $("#contactPage").offset().top;
     
             if(scrollPos >= pageAbout && scrollPos < pageSkills) {
                 $("#aboutLink").addClass("active");
                 $("#skillsLink").removeClass("active");
-                $("#experienceLink").removeClass("active");
-                $("#portfolioLink").removeClass("active");
+                $("#involvementLink").removeClass("active");
+                $("#projectsLink").removeClass("active");
                 $("#contactLink").removeClass("active");
             } else {
                 $("#aboutLink").removeClass("active");
             }
 
-            if(scrollPos >= pageSkills && scrollPos < pageExperience) {
+            if(scrollPos >= pageSkills && scrollPos < pageInvolvement) {
                 $("#aboutLink").removeClass("active");
                 $("#skillsLink").addClass("active");
-                $("#experienceLink").removeClass("active");
-                $("#portfolioLink").removeClass("active");
+                $("#involvementLink").removeClass("active");
+                $("#projectsLink").removeClass("active");
                 $("#contactLink").removeClass("active");
             } else {
                 $("#skillsLink").removeClass("active");
             }
 
-            if(scrollPos >= pageExperience && scrollPos < pagePortfolio) {
+            if(scrollPos >= pageInvolvement && scrollPos < pageProjects) {
                 $("#aboutLink").removeClass("active");
                 $("#skillsLink").removeClass("active");
-                $("#experienceLink").addClass("active");
-                $("#portfolioLink").removeClass("active");
+                $("#involvementLink").addClass("active");
+                $("#projectsLink").removeClass("active");
                 $("#contactLink").removeClass("active");
             } else {
-                $("#experienceLink").removeClass("active");
+                $("#involvementLink").removeClass("active");
             }
 
-            if(scrollPos >= pagePortfolio && scrollPos < pageContact) {
+            if(scrollPos >= pageProjects && scrollPos < pageContact) {
                 $("#aboutLink").removeClass("active");
                 $("#skillsLink").removeClass("active");
-                $("#experienceLink").removeClass("active");
-                $("#portfolioLink").addClass("active");
+                $("#involvementLink").removeClass("active");
+                $("#projectsLink").addClass("active");
                 $("#contactLink").removeClass("active");
             } else {
-                $("#portfolioLink").removeClass("active");
+                $("#projectsLink").removeClass("active");
             }
 
             if(scrollPos >= pageContact) {
                 $("#aboutLink").removeClass("active");
                 $("#skillsLink").removeClass("active");
-                $("#experienceLink").removeClass("active");
-                $("#portfolioLink").removeClass("active");
+                $("#involvementLink").removeClass("active");
+                $("#projectsLink").removeClass("active");
                 $("#contactLink").addClass("active");
             } else {
                 $("#contactLink").removeClass("active");
@@ -307,6 +317,7 @@
         $("#map").removeClass("show");
     }
     });
+
 
    
 </script>

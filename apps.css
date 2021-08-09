@@ -50,7 +50,7 @@ table {
 html {
     animation: lock 2.5s ease;
     font-family: 'Quicksand', sans-serif;
-/*    overflow-x: hidden; */
+    overflow-x: hidden;
 
   
 }
@@ -85,8 +85,8 @@ a img {
     height: 5em;
     width: 5em;
     z-index: 10;
-
 }
+
 
 .mainNav{
     background-color: #2d2d2e;
@@ -98,6 +98,18 @@ a img {
     padding-right: 10px;
     text-align: center;
 }
+
+#linkedIn img, #github img{
+    width: 35px;
+    height: 35px;
+    border-radius: 10%;
+}
+
+#linkedIn img:hover, #github img:hover{
+   background-color: #cd5c5c;
+}
+
+
 
 .intro{
     height: 100vh;
@@ -254,13 +266,15 @@ a {
 #travelButton {
     background-color: #2f2f30;
     border: none;
-    margin-top: 100px;
+    margin-top: 2%;
 }
 
 iframe {
     height: 90%;
     width: 80%;
 }
+
+
 
 
 
@@ -282,16 +296,13 @@ iframe {
     padding-left: 10px;
     padding-top: 30px;
     text-align: center;
-
 }
 
 .nav-item a:hover{
     color:#FF634F;
 }
 
-.nav-item a:focus{
-    color:#FF634F;
-}
+
 
 
 
@@ -323,7 +334,7 @@ iframe {
     position: relative;
     animation-duration: 2.5s;
     animation: loader 4s ease forwards;
-    background-image: url("images/circleLogo.png");
+    background-image: url("images/logo.png");
     background-size: cover;
     
   }
@@ -336,6 +347,9 @@ iframe {
     .show {
         display: flex;
     }
+
+  
+ 
 
 
   @keyframes intro1{
