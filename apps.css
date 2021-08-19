@@ -42,14 +42,18 @@ table {
 	border-spacing: 0;
 }
 
+input:focus, textarea:focus {
+    outline: none;
+}
+
 /* ----------------------------------------------------------- */
 
 
 
 
 html {
-    animation: lock 2.5s ease;
-    font-family: 'Quicksand', sans-serif;
+    animation: lock 3s ease;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 
   
@@ -57,7 +61,7 @@ html {
 
 body{
    
-    background-color: #282829;
+    background-color: #1e1e1f;
 }
 
 h1{
@@ -69,11 +73,15 @@ h2{
 }
 
 h3{
-    color: #e6aeae;
+    color: #dbd7d7;
 }
 
 h2 span {
     color: #cd5c5c;
+}
+
+h5{
+    color: #e6aeae;
 }
 
 
@@ -89,7 +97,7 @@ a img {
 
 
 .mainNav{
-    background-color: #2d2d2e;
+    background-color: #141415;
     display: block;
     position: fixed;
     height: 100vh;
@@ -97,6 +105,11 @@ a img {
     padding-bottom: 10%;
     padding-right: 10px;
     text-align: center;
+}
+
+.nav-item a{
+    padding: none;
+    margin-top: 10px;
 }
 
 #linkedIn img, #github img{
@@ -116,6 +129,7 @@ a img {
     width: 100vw;
     padding-right: 90px;
     padding-left: 121px;
+
 }
 
 a {
@@ -140,7 +154,7 @@ a {
     text-transform: uppercase;
 }
 
-.intro h3 {
+.intro h5 {
     text-align: right;
     padding-right: 2em;
     padding-top: 1em;
@@ -177,7 +191,7 @@ a {
     bottom:0;
     left:50%;
     justify-content: center;
-    position:absolute;
+    position: absolute;
     z-index: 5;
     padding-left: 17px;
 
@@ -208,9 +222,11 @@ a {
 
 .about {
     display: inline-block;
-    background-color: #2f2f30;
+    background-color: #252526;
    
 }
+
+
 
 .aboutText {
     padding-top: 70px;
@@ -234,6 +250,10 @@ a {
    height: 55px;
    margin-top: 50px;
 
+}
+
+.about h2 {
+    margin-top: 50px;
 }
 
 
@@ -264,7 +284,7 @@ a {
 }
 
 #travelButton {
-    background-color: #2f2f30;
+    background-color: #252526;
     border: none;
     margin-top: 2%;
 }
@@ -293,8 +313,8 @@ iframe {
     display: block;
     text-decoration: none;
     font-size: 18px;
-    padding-left: 10px;
-    padding-top: 30px;
+    margin-left: 10px;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -311,7 +331,7 @@ iframe {
 
 
 .loader-wrapper{
-    background-color: #282829;
+    background-color: #1e1e1f;
     background-attachment: local;
 
     height: 100vh;
@@ -340,7 +360,7 @@ iframe {
   }
 
 
-  .active {
+  .activeButton {
     color: #FF634F;
 }
 
@@ -348,9 +368,276 @@ iframe {
         display: flex;
     }
 
+    #skillsTitle {
+        padding-top: 50px;
+    }
+
+    #skillsPage h2{
+        color: #cd5c5c;
+        display: block;
+        padding-bottom: 30px;
+        padding-right: 120px;
+        text-align: right;
+    }
   
+    #skillsPage {
+        display: block;
+    }
+ 
+    .categories, .skillGroups{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: #515153 solid;
+    }
+
+    .categoryBlock{
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
  
 
+    #skillSets, #skillSets .row  {
+        height: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    #skillSets .row {
+        background-color: #282829;
+    }
+
+    #skillsPage h3{
+        font-size: 30px;
+    }
+
+
+    #skillSets button{
+        display: block;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #282829;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 5%;
+        border: none;
+    }
+   
+
+    .highlightButton {
+        color: #cd5c5c;
+    }
+
+    .skillDiv {
+        display: none;
+    }
+
+    #langPhrase{
+        color:#cd5c5c;
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .showBlock{
+        display: block;
+    }
+
+    .showFlex{
+        display: flex;
+    }
+
+    .skillDescriptions {
+   
+        padding-top: 100px;
+        padding-bottom: 200px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #skillDescriptions {
+        padding-top: 50px;
+    }
+
+    h4{
+        align-items: center;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: none;
+    }
+
+    #carouselExampleIndicators {
+        height: 75vh;
+        width: 101%;
+        background-color: #252526;
+    }
+
+    #involvementPage h2{
+        display: block;
+        margin: auto;
+        color: #cd5c5c;
+        margin-bottom: 20px;
+    }
+
+    
+    
+    .carousel-inner {
+        width: 50%;
+        height: 80%;
+        margin: auto;
+        top: 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel-item img {
+        margin-bottom: 100px;
+    }
+
+
+    
+    #projectsPage h2{
+        display: block;
+        color: #cd5c5c;
+        width: 101%;
+        margin-bottom: 20px;
+        background-color: #1e1e1f;
+        text-align: right;
+        padding-right: 155px;
+    }
+
+    #projectsPage .container-fluid {
+        height: 90%;
+        background-color: #282829;
+        padding-left: 0px;
+        margin-left:13px;
+    }
+
+    #projectsPage .row {
+    
+        width: 100%;
+        height: 40%;
+        margin-bottom: 20px;
+    }
+
+    #projectsPage .col{
+        display: flex;
+       
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        width: 350px;
+        border: none;
+    }
+
+    .card-title {
+        font-size:18px;
+    }
+
+    .card-body{
+        background-color: #575757;
+        border: none;
+    }
+
+    #contactContainer {
+        display: block;
+        padding: 0;
+    }
+
+    #emailForm {
+        background-color: #252526;
+        border-radius: 50px;
+    }
+    #emailForm .row {
+        height: 50vh;
+    }
+    #emailForm .col-5, #emailForm .col-7 {
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #emailForm .col-5 {
+        display: flex;
+        align-items: center;
+    }
+
+    #emailForm .col-5 p {
+        font-size: 16px;
+    }
+
+    #emailForm .col-7 {
+        background-color: #2d2d2e;
+        border-radius: 0 50px 50px 0;
+    }
+
+    #emailForm label {
+        display: block;
+        margin: 20px;
+    }
+
+    #emailForm p {
+        font-size: 20px;
+        margin: 10px;
+        margin-top: 15px;
+    }
+
+    #emailForm input, #emailForm textarea {
+        background-color: #1e1e1f;
+        color:#dbd7d7;
+        border-style: inset;
+        border-width: 2px;
+        width: 90%;
+    }
+
+    #emailForm input {
+        height: 30px;
+    }
+
+    #emailForm form {
+        height: 30vh;
+    }
+
+    #emailForm button{
+        margin-top: 5px;
+        background-color: #1e1e1f;
+        color: #dbd7d7;
+        padding: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    textarea {
+        height: 300px;
+        resize: none;
+    }
+   
+    footer {
+        background-color: #252526;
+        height: 100px;
+        width: 101%;
+        margin-top: 12%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer p {
+        font-size: 18px;
+    }
+    
 
   @keyframes intro1{
       0% {
@@ -496,7 +783,7 @@ iframe {
           padding-bottom: 0.3em;
           padding-right: 0.5em;
       }
-      .intro h3 {
+      .intro h5 {
           font-size: 1.3em;
       }
       .mainNav img {
