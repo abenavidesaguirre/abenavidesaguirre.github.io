@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Grid, Text, Link, Image } from "@chakra-ui/react";
-import * as Burger from "@animated-burgers/burger-squeeze";
+import Burger from "@animated-burgers/burger-squeeze";
 import { useState } from "react";
 import Menu from "../Menu";
 import { Logos, Pages } from "../../constants/constants";
@@ -55,11 +55,11 @@ function Header({ showLogo = false, colour = "" }: HeaderProps) {
       <Grid pr={{ base: "20px", sm: "30px" }}>
         {isMenuOpen && <Menu handleClick={() => handleClick} />}
 
-        {/* <Burger
+        <Burger
           style={{ fontSize: "12px" }}
           onClick={handleClick}
           isOpen={isMenuOpen}
-        /> */}
+        />
         {/* Burger is broken :( */}
       </Grid>
     </Flex>
