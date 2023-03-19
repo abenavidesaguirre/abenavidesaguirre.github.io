@@ -51,7 +51,7 @@ function IndicatorBox({ pageId, colour }) {
   console.log("pageId: ", pageId);
   return (
     <Link href={`#${pageId}`}>
-      <Box w={{ base: "45px", bp: "60px" }} h={"10px"} bgColor={colour} />
+      <Box w={{ base: "10px", md: "60px" }} h={"10px"} bgColor={colour} />
     </Link>
   );
 }

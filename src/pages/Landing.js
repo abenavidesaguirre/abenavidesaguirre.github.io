@@ -22,7 +22,7 @@ function Landing() {
       position={"relative"}
     >
       <Header />
-      <Flex flexGrow={1} direction={{ base: "column", bp: "row" }}>
+      <Flex h="92vh" direction={{ base: "column", bp: "row" }}>
         <LandingContent />
         <LandingImage />
       </Flex>

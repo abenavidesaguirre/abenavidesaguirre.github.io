@@ -17,6 +17,7 @@ export const theme = extendTheme({
       200: "#FAB038", //yellow
       300: "#FFFFFF", //white
       400: "#C75151", //red
+      500: "#5257C8", //blue - for button colorScheme
     },
   },
   fonts: {

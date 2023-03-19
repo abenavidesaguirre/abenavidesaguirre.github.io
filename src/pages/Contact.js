@@ -1,11 +1,13 @@
 import { Grid } from "@chakra-ui/react";
 import React from "react";
+import PageStatus from "../components/PageStatus";
+import { Pages } from "../constants/constants";
 
 function Contact() {
   return (
-    <Grid id="contact" h={"100vh"}>
-      {" "}
-      Contact{" "}
+    <Grid id="contact" h={"100vh"} position={"relative"}>
+      Contact
+      <PageStatus currentPage={Pages.CONTACT} />
     </Grid>
   );
 }

@@ -36,7 +36,10 @@ function Header({ showLogo = false, colour }) {
       <Grid>
         {showLogo ? (
           <Link href={`#${Pages.LANDING}`}>
-            <Image src={logos[colour].type} w="125px"></Image>
+            <Image
+              src={logos[colour].type}
+              w={{ base: "75px", md: "100px" }}
+            ></Image>
           </Link>
         ) : (
           <Text fontSize={{ base: "16px", md: "25px" }} color={"brand.300"}>
