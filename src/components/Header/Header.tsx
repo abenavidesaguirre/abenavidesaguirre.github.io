@@ -60,7 +60,6 @@ function Header({ showLogo = false, colour = "" }: HeaderProps) {
           onClick={handleClick}
           isOpen={isMenuOpen}
         />
-        {/* Burger is broken :( */}
       </Grid>
     </Flex>
   );
