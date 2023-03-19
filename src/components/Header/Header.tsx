@@ -1,16 +1,21 @@
 import React from "react";
 import { Flex, Grid, Text, Link, Image } from "@chakra-ui/react";
-import Burger from "@animated-burgers/burger-squeeze";
+import * as Burger from "@animated-burgers/burger-squeeze";
 import { useState } from "react";
-import Menu from "./Menu";
-import { Logos, Pages } from "../constants/constants";
-import LogoBlue from "../imgs/logos/logo-blue.png";
-import LogoRed from "../imgs/logos/logo-red.png";
-import LogoYellow from "../imgs/logos/logo-yellow.png";
-import LogoWhite from "../imgs/logos/logo-white.png";
+import Menu from "../Menu";
+import { Logos, Pages } from "../../constants/constants";
+import LogoBlue from "../../imgs/logos/logo-blue.png";
+import LogoRed from "../../imgs/logos/logo-red.png";
+import LogoYellow from "../../imgs/logos/logo-yellow.png";
+import LogoWhite from "../../imgs/logos/logo-white.png";
 import "./Header.css";
 
-function Header({ showLogo = false, colour }) {
+interface HeaderProps {
+  showLogo?: boolean;
+  colour?: string;
+}
+
+function Header({ showLogo = false, colour = "" }: HeaderProps) {
   const logos = {
     [Logos.BLUE]: { type: LogoBlue },
     [Logos.RED]: { type: LogoRed },
@@ -49,11 +54,13 @@ function Header({ showLogo = false, colour }) {
       </Grid>
       <Grid pr={{ base: "20px", sm: "30px" }}>
         {isMenuOpen && <Menu handleClick={() => handleClick} />}
-        <Burger
+
+        {/* <Burger
           style={{ fontSize: "12px" }}
           onClick={handleClick}
           isOpen={isMenuOpen}
-        />
+        /> */}
+        {/* Burger is broken :( */}
       </Grid>
     </Flex>
   );

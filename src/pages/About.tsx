@@ -1,6 +1,6 @@
-import { Flex, Text, Grid, Button, Stack } from "@chakra-ui/react";
+import { Flex, Text, Grid, Button } from "@chakra-ui/react";
 import React from "react";
-import Header from "../components/Header";
+import Header from "..//components/Header/Header";
 import PageStatus from "../components/PageStatus";
 import { Logos, Pages } from "../constants/constants";
 import AboutBkg from "../imgs/bkgs/about-bkg.png";
@@ -45,7 +45,11 @@ function About() {
   );
 }
 
-function AboutOptions({ isSmallerScreen }) {
+interface AboutOptions {
+  isSmallerScreen: boolean;
+}
+
+function AboutOptions({ isSmallerScreen }: AboutOptions) {
   const [currentlyClicked, setCurrentlyClicked] = React.useState("");
   const aboutButtons = {
     About_Me: { title: "About Me" },
@@ -55,7 +59,7 @@ function AboutOptions({ isSmallerScreen }) {
     Pets: { title: "Pets" },
   };
 
-  function handleClick(buttonTitle) {
+  function handleClick(buttonTitle: string) {
     setCurrentlyClicked(buttonTitle);
   }
 
@@ -81,7 +85,7 @@ function AboutOptions({ isSmallerScreen }) {
           <Grid>
             {Object.keys(aboutButtons)
               .slice(3)
-              .forEach((item) => (
+              .map((item) => (
                 <AboutButton buttonKey={item} buttonInfo={aboutButtons} />
               ))}
           </Grid>
@@ -90,7 +94,12 @@ function AboutOptions({ isSmallerScreen }) {
     </Grid>
   );
 
-  function AboutButton({ buttonKey, buttonInfo }) {
+  interface AboutButtonProps {
+    buttonKey: string;
+    buttonInfo: any; //try to change this after;
+  }
+
+  function AboutButton({ buttonKey, buttonInfo }: AboutButtonProps) {
     return (
       <Button
         w={"150px"}
@@ -101,7 +110,6 @@ function AboutOptions({ isSmallerScreen }) {
         }
         colorScheme="brand"
         borderColor="brand.100"
-        bgColour={"red"}
         variant={
           buttonInfo[buttonKey].title === currentlyClicked ? "solid" : "outline"
         }

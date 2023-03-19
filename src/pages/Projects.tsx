@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@chakra-ui/react";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import { Logos, Pages } from "../constants/constants";
 import PageStatus from "../components/PageStatus";
 

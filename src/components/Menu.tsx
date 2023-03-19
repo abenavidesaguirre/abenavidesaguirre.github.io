@@ -4,7 +4,11 @@ import logo from "../imgs/logos/logo-white.png";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { Pages } from "../constants/constants";
 
-function Menu({ handleClick }) {
+interface MenuProps {
+  handleClick: () => void;
+}
+
+function Menu({ handleClick }: MenuProps) {
   const menuItems = [
     { title: "Who Am I?", link: Pages.ABOUT },
     { title: "Projects", link: Pages.PROJECTS },
@@ -30,13 +34,13 @@ function Menu({ handleClick }) {
       <Link
         href={`#${Pages.LANDING}`}
         display={"contents"}
-        onClick={handleClick()}
+        onClick={handleClick} //this was handleClick()
       >
         <Image src={logo} w="45%"></Image>
       </Link>
       {menuItems.map((item, key) => {
         return (
-          <Link key={key} href={`#${item.link}`} onClick={handleClick()}>
+          <Link key={key} href={`#${item.link}`} onClick={handleClick}>
             <Text fontSize={menuFonts} fontWeight={"bold"} color={"brand.300"}>
               {item.title}
             </Text>
