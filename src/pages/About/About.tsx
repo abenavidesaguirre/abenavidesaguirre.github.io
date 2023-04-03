@@ -1,0 +1,210 @@
+import { Flex, Text, Grid, Button, Box } from "@chakra-ui/react";
+import React from "react";
+import PageStatus from "../../components/PageStatus";
+import { Pages } from "../../constants/constants";
+import { AboutContent, AboutContentKeys } from "./AboutConstants";
+import { ImpactContent } from "./Impact";
+import { ToolsContent } from "./Tools";
+
+function About() {
+  const [width, setWidth] = React.useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  });
+  const isSmallerScreen = width <= 960;
+  const [currentlyClicked, setCurrentlyClicked] = React.useState(
+    AboutContentKeys.ABOUT
+  );
+
+  function handleButtonClick(buttonTitle: string) {
+    setCurrentlyClicked(buttonTitle);
+  }
+
+  return (
+    <Grid
+      id="about"
+      w={"100vw"}
+      h={"100vh"}
+      bgSize={"cover"}
+      position={"relative"}
+      pt={"8vh"}
+    >
+      <Flex h={"92vh"} flexDir={"column"}>
+        <Grid textAlign={"center"} pb="10px">
+          <Text
+            color={"brand.100"}
+            fontSize={{ base: "30px", md: "45px" }}
+            fontWeight={"bold"}
+          >
+            Who Am I?
+          </Text>
+        </Grid>
+        {!isSmallerScreen ? (
+          <Flex h="75%" p="50px">
+            <AboutContentText
+              isSmallerScreen={isSmallerScreen}
+              contentArray={AboutContent[currentlyClicked].text}
+              currentContent={currentlyClicked}
+            />
+            <Box w="5px" bgColor={"brand.100"} mt="10px" />
+            <AboutOptions
+              isSmallerScreen={isSmallerScreen}
+              handleClick={handleButtonClick}
+              currentlyClicked={currentlyClicked}
+            />
+          </Flex>
+        ) : (
+          <Flex direction={"column"} h="90%">
+            <AboutOptions
+              isSmallerScreen={isSmallerScreen}
+              handleClick={handleButtonClick}
+              currentlyClicked={currentlyClicked}
+            />
+            <Box h="2px" w="80%" bgColor={"brand.100"} m="40px auto" />
+            <AboutContentText
+              isSmallerScreen={isSmallerScreen}
+              contentArray={AboutContent[currentlyClicked].text}
+              currentContent={currentlyClicked}
+            />
+          </Flex>
+        )}
+      </Flex>
+      <PageStatus currentPage={Pages.ABOUT} />
+    </Grid>
+  );
+}
+
+interface AboutContentTextProps {
+  isSmallerScreen: boolean;
+  contentArray: (string | JSX.Element)[];
+  currentContent: string;
+}
+
+function AboutContentText({
+  isSmallerScreen,
+  contentArray,
+  currentContent,
+}: AboutContentTextProps) {
+  console.log("currentContent: ", currentContent);
+  return (
+    <Flex
+      textAlign={isSmallerScreen ? "center" : "left"}
+      w={isSmallerScreen ? "100vw" : "80vw"}
+      p={{ base: "0px 60px", lg: "60px" }}
+      flexDir="column"
+    >
+      <Grid>
+        <Text color={"brand.100"} fontSize={{ base: "md", lg: "xl" }}>
+          {contentArray}
+        </Text>
+      </Grid>
+      <Grid flexGrow={1}>
+        {currentContent === AboutContentKeys.TOOLS && <ToolsContent />}
+        {currentContent === AboutContentKeys.IMPACT && <ImpactContent />}
+      </Grid>
+    </Flex>
+  );
+}
+interface AboutOptions {
+  isSmallerScreen: boolean;
+  handleClick: (buttonTitle: string) => void;
+  currentlyClicked: string;
+}
+
+function AboutOptions({
+  isSmallerScreen,
+  handleClick,
+  currentlyClicked,
+}: AboutOptions) {
+  return (
+    <Flex
+      flexDir={{ base: "row", lg: "column" }}
+      justify={{ base: "center", lg: "space-between" }}
+      alignItems={"center"}
+      p={{ base: "20px", lg: "80px 10px" }}
+      w={{ base: "100vw", lg: "15vw" }}
+    >
+      {!isSmallerScreen && (
+        <>
+          {Object.keys(AboutContent).map((item) => (
+            <AboutButton
+              buttonKey={item}
+              buttonInfo={AboutContent}
+              isCurrentlyClicked={AboutContent[item].title === currentlyClicked}
+              handleClick={handleClick}
+            />
+          ))}
+        </>
+      )}
+      {isSmallerScreen && (
+        <Grid justifyContent={"center"}>
+          <Flex justify={"space-evenly"}>
+            {Object.keys(AboutContent)
+              .slice(0, 3)
+              .map((item) => (
+                <AboutButton
+                  buttonKey={item}
+                  buttonInfo={AboutContent}
+                  isCurrentlyClicked={
+                    AboutContent[item].title === currentlyClicked
+                  }
+                  handleClick={handleClick}
+                />
+              ))}
+          </Flex>
+          <Flex justify={"center"}>
+            {Object.keys(AboutContent)
+              .slice(3)
+              .map((item) => (
+                <AboutButton
+                  buttonKey={item}
+                  buttonInfo={AboutContent}
+                  isCurrentlyClicked={
+                    AboutContent[item].title === currentlyClicked
+                  }
+                  handleClick={handleClick}
+                />
+              ))}
+          </Flex>
+        </Grid>
+      )}
+    </Flex>
+  );
+
+  interface AboutButtonProps {
+    buttonKey: string;
+    buttonInfo: any;
+    isCurrentlyClicked: boolean;
+    handleClick: (buttonTitle: string) => void;
+  }
+
+  function AboutButton({
+    buttonKey,
+    buttonInfo,
+    isCurrentlyClicked,
+  }: AboutButtonProps) {
+    return (
+      <Button
+        w={"150px"}
+        color={isCurrentlyClicked ? "brand.300" : "brand.100"}
+        colorScheme="brand"
+        borderColor="brand.100"
+        variant={isCurrentlyClicked ? "solid" : "outline"}
+        onClick={() => handleClick(buttonInfo[buttonKey].title)}
+        m="5px"
+      >
+        {buttonInfo[buttonKey].title}
+      </Button>
+    );
+  }
+}
+
+export default About;

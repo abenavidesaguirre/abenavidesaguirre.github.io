@@ -3,7 +3,6 @@ import { Text, Flex, Image } from "@chakra-ui/react";
 import LandingBkg from "../imgs/bkgs/landing-bkg.png";
 import "@animated-burgers/burger-squeeze/dist/styles.css";
 import headshot from "../imgs/landing/headshot.png";
-import Header from "../components/Header/Header";
 import PageStatus from "../components/PageStatus";
 import { Pages } from "../constants/constants";
 
@@ -20,8 +19,8 @@ function Landing() {
       bgPos={"right"}
       direction={"column"}
       position={"relative"}
+      pt={"8vh"}
     >
-      <Header />
       <Flex h="92vh" direction={{ base: "column", bp: "row" }}>
         <LandingContent />
         <LandingImage />

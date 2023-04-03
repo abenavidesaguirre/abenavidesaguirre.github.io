@@ -5,7 +5,7 @@ import { Pages } from "../constants/constants";
 
 function Contact() {
   return (
-    <Grid id="contact" h={"100vh"} position={"relative"}>
+    <Grid id="contact" h={"100vh"} position={"relative"} pt={"8vh"}>
       Contact
       <PageStatus currentPage={Pages.CONTACT} />
     </Grid>

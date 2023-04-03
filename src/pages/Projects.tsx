@@ -6,8 +6,13 @@ import PageStatus from "../components/PageStatus";
 
 function Projects() {
   return (
-    <Grid id="projects" h={"100vh"} bgColor="brand.200" position={"relative"}>
-      <Header showLogo={true} colour={Logos.BLUE} />
+    <Grid
+      id="projects"
+      h={"100vh"}
+      bgColor="brand.200"
+      position={"relative"}
+      pt={"8vh"}
+    >
       <Grid height={"92vh"}>
         <Grid height={"50vh"}></Grid>
         <Grid height={"42vh"} bgColor={"brand.400"}></Grid>
