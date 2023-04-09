@@ -1,4 +1,5 @@
-import aarcsLogo from "../../imgs/logos/AARCS_logo.png";
+import aarcsLogo from "../../imgs/about/impact/AARCS_logo.png";
+import * as am5 from "@amcharts/amcharts5";
 
 export const AboutContentKeys = {
   ABOUT: "About Me",
@@ -86,26 +87,137 @@ export const ImpactInfoKeys = {
 };
 
 export const ImpactInfo: {
-  [key: string]: { logo: any; role: string };
+  [key: string]: { logo: any; role: string; link: string };
 } = {
   [ImpactInfoKeys.AARCS]: {
     logo: aarcsLogo,
     role: "Dog Caregiver Shift Lead & Behaviour Volunteer",
+    link: "https://aarcs.ca/volunteer/",
   },
   [ImpactInfoKeys.CFB]: {
     logo: aarcsLogo,
     role: "Hamper & Distribution Volunteer",
+    link: "https://www.calgaryfoodbank.com/volunteer/",
   },
   [ImpactInfoKeys.LTB]: {
     logo: aarcsLogo,
     role: "Application Coordinator & Tutor Volunteer",
+    link: "https://www.learntobe.org/apply",
   },
   [ImpactInfoKeys.CPL]: {
     logo: aarcsLogo,
     role: "Math & Reading Tutor ",
+    link: "https://calgarylibrary.ca/your-library/volunteer/",
   },
   [ImpactInfoKeys.AASEE]: {
     logo: aarcsLogo,
     role: "Program Prep Lead & Office Manager",
+    link: "https://aasee.ca/cms/get-involved/be-a-volunteer/",
   },
 };
+
+const visitedColour = "#C75151";
+export const visitedCountries = [
+  {
+    id: "BR",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "CA",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "CO",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "CR",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "DO",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "FR",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "GT",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "GR",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "VA",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "IT",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "MX",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "PA",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "PT",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "ES",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "CH",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "GB",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+  {
+    id: "US",
+    polygonSettings: {
+      fill: am5.color(visitedColour),
+    },
+  },
+];

@@ -1,10 +1,12 @@
-import { Flex, Text, Grid, Button, Box } from "@chakra-ui/react";
+import { Flex, Text, Grid, Button, Box, Image } from "@chakra-ui/react";
 import React from "react";
 import PageStatus from "../../components/PageStatus";
 import { Pages } from "../../constants/constants";
 import { AboutContent, AboutContentKeys } from "./AboutConstants";
 import { ImpactContent } from "./Impact";
 import { ToolsContent } from "./Tools";
+import { TravelContent } from "./Travel";
+import birbs from "../../imgs/about/pets/birbs.png";
 
 function About() {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -98,7 +100,7 @@ function AboutContentText({
     <Flex
       textAlign={isSmallerScreen ? "center" : "left"}
       w={isSmallerScreen ? "100vw" : "80vw"}
-      p={{ base: "0px 60px", lg: "60px" }}
+      p={{ base: "0px 60px", lg: "20px 50px 0px" }}
       flexDir="column"
     >
       <Grid>
@@ -109,6 +111,12 @@ function AboutContentText({
       <Grid flexGrow={1}>
         {currentContent === AboutContentKeys.TOOLS && <ToolsContent />}
         {currentContent === AboutContentKeys.IMPACT && <ImpactContent />}
+        {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}
+        {currentContent === AboutContentKeys.PETS && (
+          <Grid justifyContent={"center"} alignItems={"center"} pt="10px">
+            <Image src={birbs} />
+          </Grid>
+        )}
       </Grid>
     </Flex>
   );
