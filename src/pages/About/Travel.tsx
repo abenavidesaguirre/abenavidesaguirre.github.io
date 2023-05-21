@@ -58,6 +58,12 @@ export function TravelContent() {
       return () => root.dispose();
     }, []);
 
-    return <div id="mapdiv" style={{ width: "100%" }} />;
+    return (
+      <Flex
+        id="mapdiv"
+        width={"100%"}
+        height={{ base: "180px", mob: "400px" }}
+      />
+    );
   }
 }

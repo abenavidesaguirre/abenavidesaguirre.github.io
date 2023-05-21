@@ -7,6 +7,7 @@ import { ImpactContent } from "./Impact";
 import { ToolsContent } from "./Tools";
 import { TravelContent } from "./Travel";
 import birbs from "../../imgs/about/pets/birbs.png";
+import { BREAKPOINTS } from "../../chakra/breakpoints";
 
 function About() {
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -21,7 +22,7 @@ function About() {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   });
-  const isSmallerScreen = width <= 960;
+  const isSmallerScreen = width <= BREAKPOINTS.tab;
   const [currentlyClicked, setCurrentlyClicked] = React.useState(
     AboutContentKeys.ABOUT
   );
@@ -40,10 +41,10 @@ function About() {
       pt={"8vh"}
     >
       <Flex h={"92vh"} flexDir={"column"}>
-        <Grid textAlign={"center"} pb="10px">
+        <Grid textAlign={"center"}>
           <Text
             color={"brand.100"}
-            fontSize={{ base: "30px", md: "45px" }}
+            fontSize={{ base: "25px", mob: "45px" }}
             fontWeight={"bold"}
           >
             Who Am I?
@@ -70,7 +71,9 @@ function About() {
               handleClick={handleButtonClick}
               currentlyClicked={currentlyClicked}
             />
-            <Box h="2px" w="80%" bgColor={"brand.100"} m="40px auto" />
+            <Flex justifyContent={"center"} p={{ base: "10px", mob: "20px" }}>
+              <Box h="2px" w="80%" bgColor={"brand.100"} />
+            </Flex>
             <AboutContentText
               isSmallerScreen={isSmallerScreen}
               contentArray={AboutContent[currentlyClicked].text}
@@ -100,16 +103,18 @@ function AboutContentText({
     <Flex
       textAlign={isSmallerScreen ? "center" : "left"}
       w={isSmallerScreen ? "100vw" : "80vw"}
-      p={{ base: "0px 60px", lg: "20px 50px 0px" }}
+      p={{ base: "0px 40px", tab: "20px 50px 0px" }}
       flexDir="column"
     >
       <Grid>
-        <Text color={"brand.100"} fontSize={{ base: "md", lg: "xl" }}>
+        <Text color={"brand.100"} fontSize={{ base: "sm", tab: "xl" }}>
           {contentArray}
         </Text>
       </Grid>
       <Grid flexGrow={1}>
-        {currentContent === AboutContentKeys.TOOLS && <ToolsContent />}
+        {currentContent === AboutContentKeys.TOOLS && (
+          <ToolsContent isSmallerScreen={isSmallerScreen} />
+        )}
         {currentContent === AboutContentKeys.IMPACT && <ImpactContent />}
         {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}
         {currentContent === AboutContentKeys.PETS && (
@@ -134,11 +139,11 @@ function AboutOptions({
 }: AboutOptions) {
   return (
     <Flex
-      flexDir={{ base: "row", lg: "column" }}
-      justify={{ base: "center", lg: "space-between" }}
+      flexDir={{ base: "row", tab: "column" }}
+      justify={{ base: "center", tab: "space-between" }}
       alignItems={"center"}
-      p={{ base: "20px", lg: "80px 10px" }}
-      w={{ base: "100vw", lg: "15vw" }}
+      p={{ base: "10px", tab: "80px 10px" }}
+      w={{ base: "100vw", tab: "15vw" }}
     >
       {!isSmallerScreen && (
         <>
@@ -201,7 +206,8 @@ function AboutOptions({
   }: AboutButtonProps) {
     return (
       <Button
-        w={"150px"}
+        w={{ base: "90px", tab: "100px", md: "150px" }}
+        h={{ base: "30px", tab: "40px" }}
         color={isCurrentlyClicked ? "brand.300" : "brand.100"}
         colorScheme="brand"
         borderColor="brand.100"

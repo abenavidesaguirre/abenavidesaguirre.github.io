@@ -12,7 +12,7 @@ function Landing() {
       id={Pages.LANDING}
       h={"100vh"}
       w={"100vw"}
-      bgImg={{ base: "none", bp: `url(${LandingBkg})` }}
+      bgImg={{ base: "none", lap: `url(${LandingBkg})` }}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
       bgColor={"brand.100"}
@@ -21,7 +21,7 @@ function Landing() {
       position={"relative"}
       pt={"8vh"}
     >
-      <Flex h="92vh" direction={{ base: "column", bp: "row" }}>
+      <Flex h="92vh" direction={{ base: "column", lap: "row" }}>
         <LandingContent />
         <LandingImage />
       </Flex>
@@ -35,11 +35,11 @@ function LandingContent() {
     <Flex
       direction={"column"}
       alignItems={"flex-start"}
-      h={{ base: "46vh", md: "40vh", bp: "100%" }}
+      h={{ base: "46vh", mob: "40vh", lap: "100%" }}
     >
       <Flex
-        w={{ base: "90%", bp: "60%" }}
-        pt={{ base: "5px", md: "20px", bp: "50px" }}
+        w={{ base: "90%", lap: "60%" }}
+        pt={{ base: "5px", mob: "20px", lap: "50px" }}
         pl={"12%"}
         direction={"column"}
         h={"100%"}
@@ -47,28 +47,28 @@ function LandingContent() {
       >
         <Flex h={"50%"} direction={"column"}>
           <Text
-            fontSize={{ base: "28px", md: "40px", bp: "60px" }}
+            fontSize={{ base: "28px", mob: "40px", lap: "60px" }}
             color={"brand.300"}
             as={"b"}
           >
             Software Engineering Student.
           </Text>
 
-          <Text fontSize={{ base: "18px", md: "25px" }} color={"brand.300"}>
+          <Text fontSize={{ base: "18px", mob: "25px" }} color={"brand.300"}>
             University of Calgary
           </Text>
-          <Text fontSize={{ base: "18px", md: "25px" }} color={"brand.300"}>
+          <Text fontSize={{ base: "18px", mob: "25px" }} color={"brand.300"}>
             Fourth Year
           </Text>
         </Flex>
-        <Flex flexGrow={1} alignItems={{ base: "end", bp: "normal" }}>
+        <Flex flexGrow={1} alignItems={{ base: "end", lap: "normal" }}>
           <Text
-            fontSize={{ base: "15px", md: "22px", bp: "30px" }}
+            fontSize={{ base: "15px", mob: "22px", lap: "30px" }}
             color={"brand.300"}
             as={"b"}
-            textAlign={{ base: "right", bp: "left" }}
+            textAlign={{ base: "right", lap: "left" }}
             pt={"20px"}
-            pl={{ base: "0px", md: "50px", bp: "0px" }}
+            pl={{ base: "0px", mob: "50px", lap: "0px" }}
           >
             Passionate about creating digital experiences and all things code.
           </Text>
@@ -81,14 +81,14 @@ function LandingContent() {
 function LandingImage() {
   return (
     <Flex
-      bgColor={{ base: "brand.200", bp: "transparent" }}
-      justifyContent={{ base: "center", bp: "normal" }}
-      alignItems={{ base: "center", bp: "normal" }}
-      h={{ base: "46vh", md: "52vh", bp: "100vh" }}
+      bgColor={{ base: "brand.200", lap: "transparent" }}
+      justifyContent={{ base: "center", lap: "normal" }}
+      alignItems={{ base: "center", lap: "normal" }}
+      h={{ base: "46vh", mob: "52vh", lap: "100vh" }}
     >
       <Image
         src={headshot}
-        boxSize={{ base: "80%", bp: "80%" }}
+        boxSize={{ base: "80%", lap: "80%" }}
         objectFit={"contain"}
       ></Image>
     </Flex>

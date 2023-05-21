@@ -73,8 +73,8 @@ export const toolInfo = [
   "Java",
   "C/C++",
   "Python",
+  "MUI/Chakra UI",
   "MySQL",
-  "Figma",
   "Git",
 ];
 

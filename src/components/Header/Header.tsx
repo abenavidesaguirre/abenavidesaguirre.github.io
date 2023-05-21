@@ -56,10 +56,10 @@ function Header() {
       <Grid>
         {!showName ? (
           <Link href={`#${Pages.LANDING}`} textDecoration={"none"}>
-            <Image src={logoColour} w={{ base: "75px", md: "115px" }}></Image>
+            <Image src={logoColour} w={{ base: "75px", mob: "115px" }}></Image>
           </Link>
         ) : (
-          <Text fontSize={"2xl"} color={"brand.300"}>
+          <Text fontSize={{ base: "lg", mob: "2xl" }} color={"brand.300"}>
             Andrea Benavides Aguirre
           </Text>
         )}

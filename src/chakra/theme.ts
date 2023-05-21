@@ -1,15 +1,16 @@
 // 1. Import `extendTheme`
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, useBreakpointValue } from "@chakra-ui/react";
 import "@fontsource/roboto-mono";
+import { BREAKPOINTS } from "./breakpoints";
 
 // 2. Call `extendTheme` and pass your custom values
 export const theme = extendTheme({
   breakpoints: {
-    sm: "320px",
-    md: "768px",
-    lg: "960px",
-    xl: "1200px",
-    bp: "1320px",
+    sm: BREAKPOINTS.sm,
+    mob: BREAKPOINTS.mob,
+    tab: BREAKPOINTS.tab,
+    md: BREAKPOINTS.md,
+    lap: BREAKPOINTS.lap,
   },
   colors: {
     brand: {

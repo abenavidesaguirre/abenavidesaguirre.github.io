@@ -15,15 +15,15 @@ function Menu({ handleClick }: MenuProps) {
     { title: "Get In Touch", link: Pages.CONTACT },
     { title: "Resume ", link: "" },
   ];
-  const menuFonts = { base: "lg", bp: "xl" };
+  const menuFonts = { base: "lg", lap: "xl" };
 
   return (
     <Flex
       backgroundColor={"brand.100"}
       position={"fixed"}
       margin={"0"}
-      padding={{ base: "50px 0px 50px", bp: "100px 0px 100px" }}
-      w={{ base: "200px", bp: "275px" }}
+      padding={{ base: "50px 0px 50px", lap: "100px 0px 100px" }}
+      w={{ base: "200px", lap: "275px" }}
       h={"100vh"}
       right="0"
       top="0"
