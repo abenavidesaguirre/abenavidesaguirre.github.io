@@ -1,4 +1,9 @@
 import aarcsLogo from "../../imgs/about/impact/AARCS_logo.png";
+import aaseeLogo from "../../imgs/about/impact/AASEE_logo.png";
+import cfbLogo from "../../imgs/about/impact/CFB_logo.png";
+import cplLogo from "../../imgs/about/impact/CPL_logo.png";
+import ltbLogo from "../../imgs/about/impact/LTB_logo.png";
+
 import * as am5 from "@amcharts/amcharts5";
 
 export const AboutContentKeys = {
@@ -78,43 +83,39 @@ export const toolInfo = [
   "Git",
 ];
 
-export const ImpactInfoKeys = {
-  AARCS: "AARCS",
-  CFB: "CFB",
-  LTB: "LTB",
-  CPL: "CPL",
-  AASEE: "AASEE",
-};
+export interface ImpactInfoProps {
+  logo: string;
+  role: string;
+  link: string;
+}
 
-export const ImpactInfo: {
-  [key: string]: { logo: any; role: string; link: string };
-} = {
-  [ImpactInfoKeys.AARCS]: {
+export const ImpactInfo: ImpactInfoProps[] = [
+  {
     logo: aarcsLogo,
     role: "Dog Caregiver Shift Lead & Behaviour Volunteer",
     link: "https://aarcs.ca/volunteer/",
   },
-  [ImpactInfoKeys.CFB]: {
-    logo: aarcsLogo,
+  {
+    logo: cfbLogo,
     role: "Hamper & Distribution Volunteer",
     link: "https://www.calgaryfoodbank.com/volunteer/",
   },
-  [ImpactInfoKeys.LTB]: {
-    logo: aarcsLogo,
+  {
+    logo: ltbLogo,
     role: "Application Coordinator & Tutor Volunteer",
     link: "https://www.learntobe.org/apply",
   },
-  [ImpactInfoKeys.CPL]: {
-    logo: aarcsLogo,
+  {
+    logo: cplLogo,
     role: "Math & Reading Tutor ",
     link: "https://calgarylibrary.ca/your-library/volunteer/",
   },
-  [ImpactInfoKeys.AASEE]: {
-    logo: aarcsLogo,
+  {
+    logo: aaseeLogo,
     role: "Program Prep Lead & Office Manager",
     link: "https://aasee.ca/cms/get-involved/be-a-volunteer/",
   },
-};
+];
 
 const visitedColour = "#C75151";
 export const visitedCountries = [

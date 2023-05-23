@@ -111,18 +111,23 @@ function AboutContentText({
           {contentArray}
         </Text>
       </Grid>
-      <Grid flexGrow={1}>
-        {currentContent === AboutContentKeys.TOOLS && (
-          <ToolsContent isSmallerScreen={isSmallerScreen} />
-        )}
-        {currentContent === AboutContentKeys.IMPACT && <ImpactContent />}
-        {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}
-        {currentContent === AboutContentKeys.PETS && (
-          <Grid justifyContent={"center"} alignItems={"center"} pt="10px">
-            <Image src={birbs} />
-          </Grid>
-        )}
-      </Grid>
+      {currentContent !== AboutContentKeys.IMPACT ? (
+        <Grid flexGrow={1}>
+          {currentContent === AboutContentKeys.TOOLS && (
+            <ToolsContent isSmallerScreen={isSmallerScreen} />
+          )}
+          {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}{" "}
+          {currentContent === AboutContentKeys.PETS && (
+            <Grid justifyContent={"center"} alignItems={"center"} pt="10px">
+              <Image src={birbs} />
+            </Grid>
+          )}
+        </Grid>
+      ) : (
+        <Flex flexGrow={1}>
+          <ImpactContent />
+        </Flex>
+      )}
     </Flex>
   );
 }
