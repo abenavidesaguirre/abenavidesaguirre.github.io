@@ -1,10 +1,5 @@
 import { Box, Flex, Link } from "@chakra-ui/react";
-import React from "react";
 import { Pages } from "../constants/constants";
-
-interface PageStatusProps {
-  currentPage: string;
-}
 
 function PageStatus({ currentPage }: any) {
   const pageIds = {
@@ -22,8 +17,6 @@ function PageStatus({ currentPage }: any) {
     },
     [Pages.CONTACT]: { current: "brand.200", others: "brand.100" },
   };
-
-  console.log("currentPage:", currentPage);
 
   return (
     <Flex
@@ -51,9 +44,7 @@ function PageStatus({ currentPage }: any) {
   );
 }
 
-//change this again too
 function IndicatorBox({ pageId, colour }: any) {
-  console.log("pageId: ", pageId);
   return (
     <Link href={`#${pageId}`}>
       <Box w={{ base: "10px", mob: "60px" }} h={"10px"} bgColor={colour} />

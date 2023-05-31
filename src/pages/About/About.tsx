@@ -98,13 +98,13 @@ function AboutContentText({
   contentArray,
   currentContent,
 }: AboutContentTextProps) {
-  console.log("currentContent: ", currentContent);
   return (
     <Flex
       textAlign={isSmallerScreen ? "center" : "left"}
       w={isSmallerScreen ? "100vw" : "80vw"}
       p={{ base: "0px 40px", tab: "20px 50px 0px" }}
       flexDir="column"
+      flexGrow={1}
     >
       <Grid>
         <Text color={"brand.100"} fontSize={{ base: "sm", tab: "xl" }}>
@@ -118,20 +118,20 @@ function AboutContentText({
           )}
           {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}{" "}
           {currentContent === AboutContentKeys.PETS && (
-            <Grid justifyContent={"center"} alignItems={"center"} pt="10px">
+            <Flex justifyContent={"center"} alignItems={"center"} pt="10px">
               <Image src={birbs} />
-            </Grid>
+            </Flex>
           )}
         </Grid>
       ) : (
         <Flex flexGrow={1}>
-          <ImpactContent />
+          <ImpactContent isSmallerScreen={isSmallerScreen} />
         </Flex>
       )}
     </Flex>
   );
 }
-interface AboutOptions {
+interface AboutOptionsProps {
   isSmallerScreen: boolean;
   handleClick: (buttonTitle: string) => void;
   currentlyClicked: string;
@@ -141,7 +141,7 @@ function AboutOptions({
   isSmallerScreen,
   handleClick,
   currentlyClicked,
-}: AboutOptions) {
+}: AboutOptionsProps) {
   return (
     <Flex
       flexDir={{ base: "row", tab: "column" }}
