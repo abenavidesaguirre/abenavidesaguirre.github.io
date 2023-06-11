@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Icon, Text } from "@chakra-ui/react";
 import { BsCaretRight } from "react-icons/bs";
-import { toolInfo } from "./AboutConstants";
+import { toolInfo } from "./About.constants";
 import { motion } from "framer-motion";
 
 interface ToolsContentProps {

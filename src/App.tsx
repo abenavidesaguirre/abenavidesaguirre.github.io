@@ -2,7 +2,7 @@ import Landing from "./pages/Landing";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "./chakra/theme";
 import About from "./pages/About/About";
-import Projects from "./pages/Projects";
+import Projects from "./pages/Projects/Projects";
 import "./App.css";
 import Contact from "./pages/Contact";
 import Header from "./components/Header/Header";

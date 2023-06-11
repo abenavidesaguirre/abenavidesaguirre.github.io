@@ -8,7 +8,7 @@ import {
   Text,
   Link,
 } from "@chakra-ui/react";
-import { ImpactInfo, ImpactInfoProps } from "./AboutConstants";
+import { ImpactInfo, ImpactInfoProps } from "./About.constants";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
@@ -58,6 +58,7 @@ interface ImpactCardProps {
 }
 
 function ImpactCard({ cardContent, isSmallerScreen }: ImpactCardProps) {
+  const { logo, link, role } = cardContent;
   return (
     <Flex w="100%" justifyContent={"center"}>
       <Card
@@ -71,10 +72,10 @@ function ImpactCard({ cardContent, isSmallerScreen }: ImpactCardProps) {
         <Flex h="100%">
           <Flex flexDir={"column"} w={{ base: "100%", tab: "55%" }}>
             <Flex h="60%" justifyContent={"center"} alignItems="center">
-              <Img src={cardContent.logo} h={{ base: "55%", tab: "60%" }} />
+              <Img src={logo} h={{ base: "55%", tab: "60%" }} />
             </Flex>
             <Grid h="40%" justifyContent={"center"} alignItems="center">
-              <Link href={cardContent.link} target="_blank">
+              <Link href={link} target="_blank">
                 <Button
                   variant={"outline"}
                   colorScheme={"brand"}
@@ -97,7 +98,7 @@ function ImpactCard({ cardContent, isSmallerScreen }: ImpactCardProps) {
               </Grid>
               <Flex alignItems={"center"}>
                 <Text color={"brand.100"} textAlign="right" p="15px">
-                  {cardContent.role}
+                  {role}
                 </Text>
               </Flex>
             </Flex>

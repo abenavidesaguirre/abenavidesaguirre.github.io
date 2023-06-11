@@ -2,7 +2,7 @@ import { Flex, Text, Grid, Button, Box, Image } from "@chakra-ui/react";
 import React from "react";
 import PageStatus from "../../components/PageStatus";
 import { Pages } from "../../constants/constants";
-import { AboutContent, AboutContentKeys } from "./AboutConstants";
+import { AboutContent, AboutContentKeys } from "./About.constants";
 import { ImpactContent } from "./Impact";
 import { ToolsContent } from "./Tools";
 import { TravelContent } from "./Travel";
