@@ -3,16 +3,16 @@ import {
   Grid,
   Flex,
   Img,
-  CardHeader,
   Box,
   Text,
   Button,
   Icon,
+  Link,
 } from "@chakra-ui/react";
 import { Pages } from "../../constants/constants";
 import PageStatus from "../../components/PageStatus";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { ProjectInfo, ProjectInfoProps } from "./Projects.constants";
@@ -41,7 +41,7 @@ function Projects() {
         >
           PROJECTS
         </Text>
-        <Flex w="90%" h="80%">
+        <Flex w="90%" h="85%">
           <Swiper
             slidesPerView={1}
             loop={true}
@@ -69,10 +69,16 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ cardContent }: ProjectCardProps) {
-  const { colour, image, title, description, tools } = cardContent;
+  const { colour, image, title, description, tools, repoLink } = cardContent;
   return (
     <Flex w="100%" h="100%" justifyContent={"center"}>
-      <Card bgColor={colour} w="80%" h="90%" borderRadius={"10px "}>
+      <Card
+        bgColor={colour}
+        w="80%"
+        h="90%"
+        borderRadius={"10px"}
+        maxW={"1100px"}
+      >
         <Box h="40%">
           <Img
             boxSize="100% "
@@ -82,15 +88,15 @@ function ProjectCard({ cardContent }: ProjectCardProps) {
             borderRadius={"10px 10px 0px 0px"}
           />
         </Box>
-        <Flex p="30px 80px" flexDir={"column"}>
+        <Flex p="30px 80px" flexDir={"column"} h="50%">
           <Grid pb={"20px"}>
             <Text fontSize={"3xl"}>{title}</Text>
           </Grid>
-          <Flex minHeight={"90%"} pb="20px">
+          <Grid pb="20px" display={"flex"}>
             <Grid w="80%" pr="30px">
               <Text>{description}</Text>
             </Grid>
-            <Box w="2px" h="80%" bgColor={"black"} />
+            <Box w="2px" bgColor={"black"} />
             <Flex flexDir={"column"}>
               {tools.map((tool) => {
                 return (
@@ -101,17 +107,19 @@ function ProjectCard({ cardContent }: ProjectCardProps) {
                 );
               })}
             </Flex>
-          </Flex>
-          <Flex justifyContent={"center"}>
+          </Grid>
+        </Flex>
+        <Flex h="10%" justifyContent={"center"}>
+          <Link href={repoLink} target="_blank" w="50%">
             <Button
               variant={"solid"}
               color="white"
               bgColor={colour === "brand.100" ? "brand.400" : "brand.100"}
-              w="50%"
+              w="100%"
             >
               Let's Go!
             </Button>
-          </Flex>
+          </Link>
         </Flex>
       </Card>
     </Flex>
