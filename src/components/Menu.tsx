@@ -29,6 +29,7 @@ function Menu({ handleClick }: MenuProps) {
       direction={"column"}
       alignItems="center"
       justifyContent={"space-between"}
+      borderLeft={"4px solid white"}
     >
       <Link
         href={`#${Pages.LANDING}`}

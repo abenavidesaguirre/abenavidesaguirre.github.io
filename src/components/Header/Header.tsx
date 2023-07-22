@@ -26,6 +26,7 @@ function Header() {
       } else {
         setShowName(true);
       }
+      setIsMenuOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -64,7 +65,7 @@ function Header() {
           </Text>
         )}
       </Grid>
-      <Grid pr={{ base: "20px", sm: "30px" }}>
+      <Grid pr={{ base: "20px", mob: "30px" }}>
         {isMenuOpen && <Menu handleClick={() => handleClick} />}
 
         <Burger

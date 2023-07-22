@@ -211,7 +211,7 @@ function AboutOptions({
   }: AboutButtonProps) {
     return (
       <Button
-        w={{ base: "90px", tab: "100px", md: "150px" }}
+        w={{ base: "90px", tab: "100px", lap: "150px" }}
         h={{ base: "30px", tab: "40px" }}
         color={isCurrentlyClicked ? "brand.300" : "brand.100"}
         colorScheme="brand"

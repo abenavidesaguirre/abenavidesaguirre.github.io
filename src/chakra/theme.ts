@@ -6,10 +6,8 @@ import { BREAKPOINTS } from "./breakpoints";
 // 2. Call `extendTheme` and pass your custom values
 export const theme = extendTheme({
   breakpoints: {
-    sm: BREAKPOINTS.sm,
     mob: BREAKPOINTS.mob,
     tab: BREAKPOINTS.tab,
-    md: BREAKPOINTS.md,
     lap: BREAKPOINTS.lap,
   },
   colors: {
