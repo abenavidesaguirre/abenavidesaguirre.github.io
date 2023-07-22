@@ -121,22 +121,27 @@ function ProjectCard({ cardContent }: ProjectCardProps) {
     return (
       <Flex
         flexDir={"column"}
-        borderLeft={"4px"}
+        borderLeft={{ base: "0px", mob: "4px" }}
+        borderTop={{ base: "4px", mob: "0px" }}
         flexGrow={1}
+        mt={{ base: "20px", mob: "0px" }}
         pt={{ base: "20px", tab: "30px" }}
-        pb="20px"
         pr={{ tab: "50px" }}
-        textAlign={"right"}
+        textAlign={{ base: "center", mob: "right" }}
       >
         <Text
           fontSize={{ base: "18px", tab: "22px" }}
           fontWeight={"bold"}
           color={"white"}
+          pb={{ base: "8px", mob: "0px" }}
         >
           Tools Used
         </Text>
         <Flex justifyContent={"space-evenly"} flexDir={"column"} h="100%">
-          <ListItems list={tools ?? []} justify="right" />
+          <ListItems
+            list={tools ?? []}
+            justify={isMobScreen ? "center" : "right"}
+          />
         </Flex>
       </Flex>
     );
@@ -181,18 +186,23 @@ function ProjectCard({ cardContent }: ProjectCardProps) {
           p={{ base: "16px", mob: "30px", tab: "30px 80px" }}
           flexDir={{ base: "row", tab: "column" }}
           h={{ base: "100%", mob: "80%", tab: "50%" }}
+          overflowY={{ base: "scroll", mob: "hidden" }}
         >
           <Flex
             p={{ mob: "20px", tab: "0px" }}
             h={{ base: "100%", mob: "80%" }}
             flexDir={"column"}
             w={{ base: "100%", mob: "65%", tab: "auto" }}
-            overflowX={{ base: "scroll", mob: "hidden" }}
             textAlign={{ base: "center", mob: "left" }}
           >
             <TitleHeader />
             <Text fontSize={"16px"}>{description}</Text>
-            {isMobScreen ? <InfoButton /> : null}
+            {isMobScreen ? (
+              <>
+                <ToolsUsed />
+                <InfoButton />
+              </>
+            ) : null}
           </Flex>
           {isTabScreen ? <ToolsUsed /> : null}
         </Flex>

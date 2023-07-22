@@ -66,7 +66,7 @@ export const AboutContent: {
   [AboutContentKeys.PETS]: {
     title: AboutContentKeys.PETS,
     text: [
-      "Meet Guppy and Luigi! These tow rascals can often be found hanging out on my monitors helping me code!",
+      "Meet Guppy and Luigi! These two rascals can often be found hanging out on my monitors helping me code!",
     ],
   },
 };

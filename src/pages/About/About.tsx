@@ -107,7 +107,7 @@ function AboutContentText({
       flexGrow={1}
     >
       <Grid>
-        <Text color={"brand.100"} fontSize={{ base: "sm", tab: "xl" }}>
+        <Text color={"brand.100"} fontSize={{ base: "sm", mob: "xl" }}>
           {contentArray}
         </Text>
       </Grid>
