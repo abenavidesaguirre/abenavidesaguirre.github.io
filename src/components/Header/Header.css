@@ -1,0 +1,9 @@
+.burger.burger.burger-squeeze .burger-lines,
+.burger.burger-squeeze .burger-lines:after,
+.burger.burger-squeeze .burger-lines:before {
+  background-color: #c75151;
+}
+
+.burger.burger-squeeze.open .burger-lines {
+  background-color: transparent;
+}
