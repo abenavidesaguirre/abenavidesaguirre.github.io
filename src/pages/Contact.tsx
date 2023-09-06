@@ -1,4 +1,12 @@
-import { Grid, Flex, Text, Input, Textarea, Button } from "@chakra-ui/react";
+import {
+  Grid,
+  Flex,
+  Text,
+  Input,
+  Textarea,
+  Button,
+  Link,
+} from "@chakra-ui/react";
 import PageStatus from "../components/PageStatus";
 import { Pages } from "../constants/constants";
 import { useForm } from "@formspree/react";
@@ -31,12 +39,13 @@ function Contact() {
             I'd love to hear from you!
           </Text>
           <Text fontSize={{ base: "14px", mob: "18px" }}>
-            You can also email me directly at {""}
-            <Text display={"inline-block"} textDecor={"underline"}>
-              <a href="mailto:andrea.benavidesagu@gmail.com">
-                andrea.benavidesagu@gmail.com
-              </a>
-            </Text>
+            {"You can also email me directly at "}
+            <Link
+              href="mailto:andrea.benavidesagu@gmail.com"
+              textDecor={"underline"}
+            >
+              andrea.benavidesagu@gmail.com
+            </Link>
           </Text>
         </Flex>
 

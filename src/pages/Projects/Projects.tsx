@@ -42,9 +42,9 @@ function Projects() {
             navigation={true}
             modules={[Pagination, Navigation]}
           >
-            {ProjectInfo.map((project) => {
+            {ProjectInfo.map((project, key) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={key}>
                   <ProjectCard cardContent={project} />
                 </SwiperSlide>
               );
@@ -101,9 +101,9 @@ function ProjectCard({ cardContent }: ProjectCardProps) {
   const ListItems = ({ list, justify }: ListItemsProps) => {
     return (
       <>
-        {list?.map((listItem) => {
+        {list?.map((listItem, key) => {
           return (
-            <Flex justifyContent={justify} m="12px 0px">
+            <Flex justifyContent={justify} m="12px 0px" key={key}>
               <Grid pt="6px">
                 <Icon as={BsCaretRight} />
               </Grid>

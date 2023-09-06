@@ -58,7 +58,7 @@ function LandingContent() {
             University of Calgary
           </Text>
           <Text fontSize={{ base: "18px", mob: "25px" }} color={"brand.300"}>
-            Fourth Year
+            Final Year
           </Text>
         </Flex>
         <Flex flexGrow={1} alignItems={{ base: "end", lap: "normal" }}>

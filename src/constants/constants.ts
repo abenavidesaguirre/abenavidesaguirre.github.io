@@ -1,8 +1,8 @@
 export const Pages = {
-  LANDING: "landing",
-  ABOUT: "about",
-  PROJECTS: "projects",
-  CONTACT: "contact",
+  LANDING: "#landing",
+  ABOUT: "#about",
+  PROJECTS: "#projects",
+  CONTACT: "#contact",
 };
 
 export const Logos = {

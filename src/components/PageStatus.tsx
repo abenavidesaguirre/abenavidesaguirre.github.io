@@ -30,8 +30,9 @@ function PageStatus({ currentPage }: any) {
       left={"0"}
       bottom={"0"}
     >
-      {Object.keys(pageIds).map((page) => (
+      {Object.keys(pageIds).map((page, key) => (
         <IndicatorBox
+          key={key}
           pageId={page}
           colour={
             page === currentPage

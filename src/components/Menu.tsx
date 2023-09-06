@@ -12,7 +12,10 @@ function Menu({ handleClick }: MenuProps) {
     { title: "Who Am I?", link: Pages.ABOUT },
     { title: "Projects", link: Pages.PROJECTS },
     { title: "Get In Touch", link: Pages.CONTACT },
-    { title: "Resume ", link: "" },
+    {
+      title: "Resume",
+      link: "https://drive.google.com/file/d/1tAtzBACse-YDMxEe5MBJwi4duTDCW8ho/view?usp=sharing",
+    },
   ];
   const menuFonts = { base: "lg", lap: "xl" };
 
@@ -40,7 +43,12 @@ function Menu({ handleClick }: MenuProps) {
       </Link>
       {menuItems.map((item, key) => {
         return (
-          <Link key={key} href={`#${item.link}`} onClick={handleClick() as any}>
+          <Link
+            key={key}
+            href={item.link}
+            target={item.title === "Resume" ? "_blank" : "_self"}
+            onClick={handleClick() as any}
+          >
             <Text fontSize={menuFonts} fontWeight={"bold"} color={"brand.300"}>
               {item.title}
             </Text>

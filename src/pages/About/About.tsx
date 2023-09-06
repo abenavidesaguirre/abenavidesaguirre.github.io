@@ -89,7 +89,7 @@ function About() {
 
 interface AboutContentTextProps {
   isSmallerScreen: boolean;
-  contentArray: (string | JSX.Element)[];
+  contentArray: string;
   currentContent: string;
 }
 
@@ -107,7 +107,11 @@ function AboutContentText({
       flexGrow={1}
     >
       <Grid>
-        <Text color={"brand.100"} fontSize={{ base: "sm", mob: "xl" }}>
+        <Text
+          color={"brand.100"}
+          fontSize={{ base: "sm", mob: "xl" }}
+          whiteSpace={"pre-line"}
+        >
           {contentArray}
         </Text>
       </Grid>
@@ -116,7 +120,7 @@ function AboutContentText({
           {currentContent === AboutContentKeys.TOOLS && (
             <ToolsContent isSmallerScreen={isSmallerScreen} />
           )}
-          {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}{" "}
+          {currentContent === AboutContentKeys.TRAVEL && <TravelContent />}
           {currentContent === AboutContentKeys.PETS && (
             <Flex justifyContent={"center"} alignItems={"center"} pt="10px">
               <Image src={birbs} />
@@ -152,8 +156,9 @@ function AboutOptions({
     >
       {!isSmallerScreen && (
         <>
-          {Object.keys(AboutContent).map((item) => (
+          {Object.keys(AboutContent).map((item, key) => (
             <AboutButton
+              key={key}
               buttonKey={item}
               buttonInfo={AboutContent}
               isCurrentlyClicked={AboutContent[item].title === currentlyClicked}
@@ -167,8 +172,9 @@ function AboutOptions({
           <Flex justify={"space-evenly"}>
             {Object.keys(AboutContent)
               .slice(0, 3)
-              .map((item) => (
+              .map((item, key) => (
                 <AboutButton
+                  key={key}
                   buttonKey={item}
                   buttonInfo={AboutContent}
                   isCurrentlyClicked={
@@ -181,8 +187,9 @@ function AboutOptions({
           <Flex justify={"center"}>
             {Object.keys(AboutContent)
               .slice(3)
-              .map((item) => (
+              .map((item, key) => (
                 <AboutButton
+                  key={key}
                   buttonKey={item}
                   buttonInfo={AboutContent}
                   isCurrentlyClicked={

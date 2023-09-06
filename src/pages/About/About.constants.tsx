@@ -15,59 +15,30 @@ export const AboutContentKeys = {
 };
 
 export const AboutContent: {
-  [key: string]: { title: string; text: (string | JSX.Element)[] };
+  [AboutKey: string]: {
+    title: string;
+    text: string;
+  };
 } = {
   [AboutContentKeys.ABOUT]: {
     title: AboutContentKeys.ABOUT,
-    text: [
-      "Hi, it's nice to meet you! I'm Andrea!",
-      <br />,
-      <br />,
-      "I'm a fourth year software engineering student at the University of Calgary!",
-      <br />,
-      <br />,
-      "My mission is to craft impactful technology that can make a positive difference. I'm a huge advocate for continuous learning, constantly stepping out of my comfort zone to be a creative and effective innovator.",
-      <br />,
-      <br />,
-      "In addition to a love for coding, I'm a voracious reader, enjoy drawing, and play a couple instruments.",
-    ],
+    text: "Hi, it's nice to meet you! I'm Andrea! \n \n I'm a final year software engineering student at the University of Calgary! \n \n My mission is to craft impactful technology that can make a positive difference. I'm a huge advocate for continuous learning, constantly stepping out of my comfort zone to be a creative and effective innovator. \n \n In addition to a love for coding, I'm a voracious reader, enjoy drawing, and play a couple of instruments.",
   },
   [AboutContentKeys.TOOLS]: {
     title: AboutContentKeys.TOOLS,
-    text: [
-      "These are some of the tools I've been working with lately: ",
-      <br />,
-      <br />,
-    ],
+    text: "These are some of the tools I've been working with lately: \n \n ",
   },
   [AboutContentKeys.IMPACT]: {
     title: AboutContentKeys.IMPACT,
-    text: [
-      "Outside of software development, I love spending my free time working towards causes that I believe in.",
-      <br />,
-      <br />,
-      "I'm particularly passionate about animal welfare and education advancement.",
-      <br />,
-      <br />,
-      "Check out these really cool organizations that are making big impacts!",
-      <br />,
-      <br />,
-    ],
+    text: "Outside of software development, I love spending my free time working towards causes that I believe in. \n \n I'm particularly passionate about animal welfare and education advancement. \n \n Check out these really cool organizations that are making big impacts!",
   },
   [AboutContentKeys.TRAVEL]: {
     title: AboutContentKeys.TRAVEL,
-    text: [
-      "Travel is one of my greatest joys. I've had the priviledge to visit the beautiful countries below!",
-      <br />,
-      <br />,
-      "I hope to backpack through South America shortly after grauation!",
-    ],
+    text: "Travel is one of my greatest joys. I've had the privilege to visit the beautiful countries below! \n \n I hope to backpack through South America shortly after graduation!",
   },
   [AboutContentKeys.PETS]: {
     title: AboutContentKeys.PETS,
-    text: [
-      "Meet Guppy and Luigi! These two rascals can often be found hanging out on my monitors helping me code!",
-    ],
+    text: "Meet Guppy and Luigi! These two rascals can often be found hanging out on my monitors helping me code!",
   },
 };
 

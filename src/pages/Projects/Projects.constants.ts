@@ -20,14 +20,14 @@ export const ProjectInfo: ProjectInfoProps[] = [
     description:
       "A web application project designed to find and book unique local travel excursions while maintaining COVID-19 protocols. This system is also used for staff scheduling purposes with calendar integrations. ",
     image: backyardTravelsImg,
-    tools: ["React", "JavaScript", "Bootstrap", "mySQL"],
+    tools: ["React", "JavaScript", "Bootstrap", "MySQL"],
     repoLink: "https://github.com/abenavidesaguirre/CPSC471_FinalProject",
     colour: "brand.100",
   },
   {
     title: "Bulletin",
     description:
-      "A collaborative organizational management software web application inspired by the concept of bulletin boards to facilitate co-existance in households. Bulletin provides a shared space for groups to use tools that aid in assigning tasks/chores, to-do lists, reminders and event planning.  ",
+      "A collaborative organizational management software web application inspired by the concept of bulletin boards to facilitate co-existence in households. Bulletin provides a shared space for groups to use tools that aid in assigning tasks/chores, to-do lists, reminders and event planning.  ",
     image: bulletinImg,
     tools: ["React", "TypeScript", "Firebase"],
     repoLink: "https://github.com/arpithindukuri/bulletin",
@@ -46,7 +46,7 @@ export const ProjectInfo: ProjectInfoProps[] = [
   {
     title: "My First Portfolio",
     description:
-      "My first attempt at making a functional web application. I've come a long way since this project written almost solely in HTML, but it was what opened my eyes to the beautiful world of web development.",
+      "My first attempt at making a functional web application. I've come a long way since this project was written almost solely in HTML, but it was what opened my eyes to the beautiful world of web development.",
     image: firstPortfolio,
     tools: ["HTML", "CSS", "JavaScript"],
     repoLink: "https://github.com/abenavidesaguirre/portfolio-v1",
@@ -55,7 +55,7 @@ export const ProjectInfo: ProjectInfoProps[] = [
   {
     title: "Travel Itinerary Maker",
     description:
-      "An itinerary for travel lovers that allows users to organize their flights, accomodations, and travel details in an organized fashion. Users can create custom itineraries for their destinations and activities and share them with their travel companions for a simple travelling experience.",
+      "An itinerary for travel lovers that allows users to organize their flights, accommodations, and travel details in an organized fashion. Users can create custom itineraries for their destinations and activities and share them with their travel companions for a simple travelling experience.",
     image: travelIteneraryImg,
     tools: ["TypeScript", "React", "Firebase"],
     colour: "brand.100",
