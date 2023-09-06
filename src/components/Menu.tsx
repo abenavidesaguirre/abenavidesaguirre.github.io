@@ -57,10 +57,13 @@ function Menu({ handleClick }: MenuProps) {
       })}
 
       <Flex w="50%" justifyContent={"space-between"}>
-        <Link href="https://github.com/abenavidesaguirre">
+        <Link href="https://github.com/abenavidesaguirre" target="_blank">
           <FaGithubSquare size={"40px"} color={"#FAB038"} />
         </Link>
-        <Link href="https://ca.linkedin.com/in/andreabenavidesaguirre">
+        <Link
+          href="https://ca.linkedin.com/in/andreabenavidesaguirre"
+          target="_blank"
+        >
           <FaLinkedin size="40px" color="#FAB038" />
         </Link>
       </Flex>
